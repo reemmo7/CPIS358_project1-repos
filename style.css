@@ -1,0 +1,537 @@
+/* =========================================================
+   EVENTEASE STORE
+   Main External CSS
+   ========================================================= */
+
+
+/* =========================================================
+   1. GENERAL PAGE SETTINGS
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff8fb;
+    color: #333333;
+    line-height: 1.6;
+}
+
+
+/* Anonymous/general element selectors */
+h1,
+h2,
+h3,
+h4 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+p {
+    margin-bottom: 10px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   2. HEADER
+   ========================================================= */
+
+.main-header {
+    width: 100%;
+    min-height: 80px;
+    background: linear-gradient( 135deg, #7b2cbf, #c77dff );
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 7%;
+    /* Shadow effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+    /* Layering */
+    position: relative;
+    z-index: 100;
+}
+
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+    .logo-area h1 {
+        font-size: 26px;
+    }
+
+
+.logo {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: white;
+}
+
+
+/* =========================================================
+   3. NAVIGATION MENU
+   ========================================================= */
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+
+
+.main-nav li {
+    display: inline-block;
+}
+
+
+.main-nav a {
+    display: block;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+
+    .main-nav a:hover {
+        background-color: white;
+        color: #7b2cbf;
+        transform: translateY(-2px);
+    }
+
+
+    .main-nav a.active {
+        background-color: white;
+        color: #7b2cbf;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    }
+
+
+/* =========================================================
+   4. PAGE BANNER
+   ========================================================= */
+
+.page-banner {
+    min-height: 260px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    overflow: hidden;
+}
+
+
+/* Layering using z-index */
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 20, 70, 0.68);
+    z-index: 1;
+}
+
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 30px;
+}
+
+
+    .banner-content h2 {
+        font-size: 38px;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+
+
+    .banner-content p {
+        font-size: 18px;
+    }
+
+
+/* =========================================================
+   5. SIGNUP PAGE LAYOUT
+   ========================================================= */
+
+.signup-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   6. SIGNUP CARD
+   ========================================================= */
+
+.signup-card {
+    background-color: white;
+    padding: 35px;
+    border: 1px solid #ead8f2;
+    border-radius: 15px;
+    /* Shadow requirement */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.signup-intro h2 {
+    color: #7b2cbf;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+
+.signup-intro {
+    color: #555555;
+}
+
+
+/* =========================================================
+   7. FORM
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 7px;
+        color: #4a235a;
+    }
+
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 13px;
+        border: 2px solid #ddd0e5;
+        border-radius: 8px;
+        font-size: 15px;
+        background-color: #fff;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #9d4edd;
+            box-shadow: 0 0 0 3px rgba(157, 78, 221, 0.15);
+        }
+
+
+/* =========================================================
+   8. FIELDSET
+   ========================================================= */
+
+fieldset {
+    border: 2px solid #e4c8ef;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fcf8ff;
+}
+
+
+legend {
+    padding: 0 8px;
+    font-weight: bold;
+    color: #7b2cbf;
+}
+
+
+.checkbox-label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+
+    .checkbox-label input {
+        margin-right: 8px;
+        accent-color: #7b2cbf;
+    }
+
+
+/* =========================================================
+   9. TERMS BOX
+   ========================================================= */
+
+.terms-box {
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #faf3ff;
+    border-left: 5px solid #7b2cbf;
+    border-radius: 6px;
+}
+
+
+/* =========================================================
+   10. ERROR MESSAGES
+   ========================================================= */
+
+.error-message {
+    display: block;
+    min-height: 18px;
+    margin-top: 4px;
+    color: #d62828;
+    font-size: 13px;
+}
+
+
+.input-error {
+    border-color: #d62828 !important;
+    background-color: #fff4f4 !important;
+}
+
+
+.input-success {
+    border-color: #2a9d8f !important;
+    background-color: #f3fffc !important;
+}
+
+
+/* =========================================================
+   11. PASSWORD STRENGTH
+   ========================================================= */
+
+.password-strength {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.password-weak {
+    color: #d62828;
+}
+
+
+.password-medium {
+    color: #f77f00;
+}
+
+
+.password-strong {
+    color: #2a9d8f;
+}
+
+
+/* =========================================================
+   12. DYNAMIC BOX
+   ========================================================= */
+
+.dynamic-box {
+    padding: 18px;
+    margin: 20px 0;
+    border: 2px dashed #9d4edd;
+    border-radius: 10px;
+    background-color: #faf3ff;
+    color: #4a235a;
+    min-height: 55px;
+    transition: all 0.3s ease;
+}
+
+
+    .dynamic-box.highlight {
+        transform: scale(1.01);
+        box-shadow: 0 5px 15px rgba(123, 44, 191, 0.15);
+    }
+
+
+/* =========================================================
+   13. BUTTONS
+   ========================================================= */
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+
+.primary-btn {
+    background-color: #7b2cbf;
+    color: white;
+}
+
+
+    .primary-btn:hover {
+        background-color: #5a189a;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    }
+
+
+.secondary-btn {
+    background-color: #e9d8f4;
+    color: #4a235a;
+}
+
+
+    .secondary-btn:hover {
+        background-color: #d8b4e8;
+    }
+
+
+/* =========================================================
+   14. SIDE CARD
+   ========================================================= */
+
+.signup-side-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #ead8f2;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    position: sticky;
+    top: 20px;
+}
+
+
+    .signup-side-card h3 {
+        color: #7b2cbf;
+        margin-bottom: 15px;
+    }
+
+
+.benefits-list {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+    .benefits-list li {
+        margin-bottom: 10px;
+    }
+
+
+.tip-box {
+    background-color: #fff5e6;
+    border-left: 5px solid #f77f00;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+/* =========================================================
+   15. FOOTER
+   ========================================================= */
+
+.main-footer {
+    background-color: #29152f;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+
+    .main-footer a {
+        color: #e0aaff;
+        font-weight: bold;
+    }
+
+
+        .main-footer a:hover {
+            text-decoration: underline;
+        }
+
+
+/* =========================================================
+   16. RESPONSIVE DESIGN
+   ========================================================= */
+
+@media screen and (max-width: 850px) {
+
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    .signup-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .signup-side-card {
+        position: static;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .main-nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+
+    .signup-card {
+        padding: 20px;
+    }
+
+
+    .banner-content h2 {
+        font-size: 28px;
+    }
+
+
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

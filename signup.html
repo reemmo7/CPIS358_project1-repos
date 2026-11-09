@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | EventEase Store</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS  -->
+    <style>
+        .signup-intro {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+            .signup-intro span {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+
+        <div class="logo-area">
+
+            <a href="index.html">
+                <img src="images/logo.png"
+                     alt="EventEase Store Logo"
+                     class="logo">
+            </a>
+
+            <h1>EventEase Store</h1>
+
+        </div>
+
+        <!-- Main Navigation Menu -->
+        <nav class="main-nav">
+
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+
+                <li>
+                    <a href="signup.html" class="active">Sign Up</a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Layered Hero Section -->
+    <section class="page-banner">
+
+        <div class="banner-overlay"></div>
+
+        <div class="banner-content">
+            <h2>Create Your EventEase Account</h2>
+
+            <p>
+                Join our event planning community and make your
+                celebrations easier to organize.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Main Content -->
+    <main class="signup-container">
+
+        <section class="signup-card">
+
+            <div class="signup-intro">
+
+                <h2>Sign Up</h2>
+
+                <p>
+                    Create an account to explore birthday decorations,
+                    graduation accessories, party favors, gift wrapping,
+                    customized invitations and celebration bundles.
+                </p>
+
+                <p>
+                    Start planning your <span>perfect celebration</span> today!
+                </p>
+
+            </div>
+
+
+            <!-- Signup Form -->
+            <form id="signupForm" onsubmit="return validateSignupForm()">
+
+                <!-- Full Name -->
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input type="text"
+                           id="fullName"
+                           name="fullName"
+                           placeholder="Enter your full name">
+
+                    <small id="nameError" class="error-message"></small>
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="example@email.com">
+
+                    <small id="emailError" class="error-message"></small>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           placeholder="Create a password">
+
+                    <!-- Dynamic password message -->
+                    <p id="passwordStrength" class="password-strength">
+                        Password strength will appear here.
+                    </p>
+
+                    <small id="passwordError" class="error-message"></small>
+
+                </div>
+
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input type="password"
+                           id="confirmPassword"
+                           name="confirmPassword"
+                           placeholder="Re-enter your password">
+
+                    <small id="confirmPasswordError"
+                           class="error-message"></small>
+
+                </div>
+
+
+                <!-- Event Type -->
+                <div class="form-group">
+
+                    <label for="eventType">
+                        What type of event are you planning?
+                    </label>
+
+                    <select id="eventType" name="eventType">
+
+                        <option value="">
+                            Select an event
+                        </option>
+
+                        <option value="Birthday">
+                            Birthday
+                        </option>
+
+                        <option value="Graduation">
+                            Graduation
+                        </option>
+
+                        <option value="Small Celebration">
+                            Small Celebration
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                    <small id="eventError" class="error-message"></small>
+
+                </div>
+
+
+                <!-- Event Date -->
+                <div class="form-group">
+
+                    <label for="eventDate">
+                        Event Date
+                    </label>
+
+                    <input type="date"
+                           id="eventDate"
+                           name="eventDate">
+
+                    <small id="dateError" class="error-message"></small>
+
+                </div>
+
+
+                <!-- Services -->
+                <fieldset>
+
+                    <legend>
+                        What services are you interested in?
+                    </legend>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox"
+                               name="services"
+                               value="Birthday Decorations">
+                        Birthday Decorations
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox"
+                               name="services"
+                               value="Graduation Accessories">
+                        Graduation Accessories
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox"
+                               name="services"
+                               value="Party Favors">
+                        Party Favors
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox"
+                               name="services"
+                               value="Gift Wrapping">
+                        Gift Wrapping
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox"
+                               name="services"
+                               value="Customized Invitations">
+                        Customized Invitations
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox"
+                               name="services"
+                               value="Celebration Bundles">
+                        Celebration Bundles
+                    </label>
+
+                </fieldset>
+
+
+                <!-- Terms -->
+                <div class="terms-box">
+
+                    <label class="checkbox-label">
+
+                        <input type="checkbox"
+                               id="terms"
+                               name="terms">
+
+                        I agree to the EventEase terms and conditions.
+
+                    </label>
+
+                    <small id="termsError"
+                           class="error-message"></small>
+
+                </div>
+
+
+                <!-- Dynamic Event Summary -->
+                <div id="eventSummary"
+                     class="dynamic-box">
+
+                    Your event information will appear here.
+
+                </div>
+
+
+                <!-- Submit Button -->
+                <button type="submit"
+                        class="btn primary-btn"
+                        id="signupButton">
+                    Create Account
+                </button>
+
+                <!-- Reset Button -->
+                <button type="reset"
+                        class="btn secondary-btn"
+                        onclick="resetSignupForm()">
+                    Clear Form
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Side Information -->
+        <aside class="signup-side-card">
+
+            <h3>Why Join EventEase?</h3>
+
+            <ul class="benefits-list">
+
+                <li>Browse event essentials in one place.</li>
+
+                <li>Plan birthdays and graduations easily.</li>
+
+                <li>Find party favors and decorations.</li>
+
+                <li>Customize invitations.</li>
+
+                <li>Choose convenient celebration bundles.</li>
+
+            </ul>
+
+            <div class="tip-box">
+
+                <h4>Planning Tip</h4>
+
+                <p>
+                    Start planning early so you have enough time
+                    to choose decorations, invitations and party favors.
+                </p>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="main-footer">
+
+        <p>
+            &copy; 2026 EventEase Store. All Rights Reserved.
+        </p>
+
+        <p>
+
+            <a href="index.html#products">
+                Browse Products
+            </a>
+
+            |
+
+            <a href="about.html">
+                Learn More About Us
+            </a>
+
+        </p>
+
+    </footer>
+
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+
+    <!-- Embedded JavaScript -->
+    <script>
+
+        // Embedded JavaScript 
+        console.log("EventEase Sign Up page loaded successfully.");
+
+    </script>
+
+</body>
+
+</html>
