@@ -45,7 +45,7 @@ function checkPasswordStrength() {
     const strengthMessage =
         document.getElementById("passwordStrength");
 
-    // Check if the signup page exists
+    // Check if signup page exists
     if (!password || !strengthMessage) {
         return;
     }
@@ -58,11 +58,9 @@ function checkPasswordStrength() {
 
     if (value.length === 0) {
 
-        strengthMessage.textContent =
-            "Password strength will appear here.";
+        strengthMessage.textContent = "Password strength will appear here.";
 
-        strengthMessage.className =
-            "password-strength";
+        strengthMessage.className = "password-strength";
 
         return;
     }
@@ -72,52 +70,41 @@ function checkPasswordStrength() {
 
     if (value.length < 6) {
 
-        strengthMessage.textContent =
-            "Weak password - use at least 6 characters.";
+        strengthMessage.textContent = "Weak password - use at least 6 characters.";
 
-        strengthMessage.className =
-            "password-strength password-weak";
+        strengthMessage.className = "password-strength password-weak";
 
     }
 
     else if (value.length < 10) {
 
-        strengthMessage.textContent =
-            "Medium password - add more characters.";
+        strengthMessage.textContent = "Medium password - add more characters.";
 
-        strengthMessage.className =
-            "password-strength password-medium";
+        strengthMessage.className = "password-strength password-medium";
 
     }
 
     else {
 
-        strengthMessage.textContent =
-            "Strong password!";
+        strengthMessage.textContent = "Strong password!";
 
-        strengthMessage.className =
-            "password-strength password-strong";
+        strengthMessage.className = "password-strength password-strong";
 
     }
-
 }
 
 
 /* =========================================================
    4. EVENT SUMMARY
-   Dynamic HTML element
    ========================================================= */
 
 function updateEventSummary() {
 
-    const eventType =
-        document.getElementById("eventType");
+    const eventType = document.getElementById("eventType");
 
-    const eventDate =
-        document.getElementById("eventDate");
+    const eventDate = document.getElementById("eventDate");
 
-    const summary =
-        document.getElementById("eventSummary");
+    const summary = document.getElementById("eventSummary");
 
 
     if (!eventType || !eventDate || !summary) {
@@ -125,19 +112,16 @@ function updateEventSummary() {
     }
 
 
-    const selectedEvent =
-        eventType.value;
+    const selectedEvent = eventType.value;
 
-    const selectedDate =
-        eventDate.value;
+    const selectedDate = eventDate.value;
 
 
     /* Control statement */
 
     if (selectedEvent === "" && selectedDate === "") {
 
-        summary.textContent =
-            "Your event information will appear here.";
+        summary.textContent = "Your event information will appear here.";
 
         summary.classList.remove("highlight");
 
@@ -145,55 +129,39 @@ function updateEventSummary() {
     }
 
 
-    let message =
-        "<strong>Your Event Plan:</strong><br>";
+    let message = "<strong>Your Event Plan:</strong><br>";
 
 
     if (selectedEvent !== "") {
 
-        message +=
-            "Event Type: " +
-            selectedEvent +
-            "<br>";
-
+        message += "Event Type: " + selectedEvent + "<br>";
     }
 
     else {
 
-        message +=
-            "Event Type: Not selected<br>";
-
+        message += "Event Type: Not selected<br>";
     }
 
 
     if (selectedDate !== "") {
 
-        message +=
-            "Event Date: " +
-            selectedDate +
-            "<br>";
-
+        message += "Event Date: " + selectedDate + "<br>";
     }
 
     else {
 
-        message +=
-            "Event Date: Not selected<br>";
-
+        message += "Event Date: Not selected<br>";
     }
 
 
-    message +=
-        "<br>Choose your favorite services below to create your event plan.";
+    message += "<br>Choose your favorite services below to create your event plan.";
 
 
     /* Dynamic HTML */
-
     summary.innerHTML = message;
 
 
     /* Dynamic CSS */
-
     summary.classList.add("highlight");
 
 }
@@ -205,8 +173,7 @@ function updateEventSummary() {
 
 function validateEmail(email) {
 
-    const emailPattern =
-        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     return emailPattern.test(email);
 }
@@ -218,48 +185,34 @@ function validateEmail(email) {
 
 function validateSignupForm() {
 
-    const fullName =
-        document.getElementById("fullName");
+    const fullName = document.getElementById("fullName");
 
-    const email =
-        document.getElementById("email");
+    const email = document.getElementById("email");
 
-    const password =
-        document.getElementById("password");
+    const password = document.getElementById("password");
 
-    const confirmPassword =
-        document.getElementById("confirmPassword");
+    const confirmPassword = document.getElementById("confirmPassword");
 
-    const eventType =
-        document.getElementById("eventType");
+    const eventType = document.getElementById("eventType");
 
-    const eventDate =
-        document.getElementById("eventDate");
+    const eventDate = document.getElementById("eventDate");
 
-    const terms =
-        document.getElementById("terms");
+    const terms = document.getElementById("terms");
 
 
-    const nameError =
-        document.getElementById("nameError");
+    const nameError = document.getElementById("nameError");
 
-    const emailError =
-        document.getElementById("emailError");
+    const emailError = document.getElementById("emailError");
 
-    const passwordError =
-        document.getElementById("passwordError");
+    const passwordError = document.getElementById("passwordError");
 
-    const confirmPasswordError =
-        document.getElementById("confirmPasswordError");
+    const confirmPasswordError = document.getElementById("confirmPasswordError");
 
-    const eventError =
-        document.getElementById("eventError");
+    const eventError = document.getElementById("eventError");
 
-    const dateError =
-        document.getElementById("dateError");
+    const dateError = document.getElementById("dateError");
 
-    const termsError =
-        document.getElementById("termsError");
+    const termsError = document.getElementById("termsError");
 
 
     let valid = true;
@@ -454,8 +407,7 @@ function validateSignupForm() {
 
     if (!terms.checked) {
 
-        termsError.textContent =
-            "You must agree to the terms and conditions.";
+        termsError.textContent = "You must agree to the terms and conditions.";
 
         valid = false;
 
@@ -504,15 +456,10 @@ function validateSignupForm() {
 
 function resetSignupForm() {
 
-    const fields =
-        document.querySelectorAll(
-            "#signupForm input, #signupForm select"
-        );
+    const fields = document.querySelectorAll("#signupForm input, #signupForm select");
 
 
     /*
-       LOOP REQUIREMENT
-
        This for loop removes the validation
        classes from every form field.
     */
@@ -526,10 +473,7 @@ function resetSignupForm() {
     }
 
 
-    const errorMessages =
-        document.querySelectorAll(
-            ".error-message"
-        );
+    const errorMessages = document.querySelectorAll(".error-message");
 
 
     /*
@@ -543,33 +487,24 @@ function resetSignupForm() {
     }
 
 
-    const passwordStrength =
-        document.getElementById(
-            "passwordStrength"
-        );
+    const passwordStrength = document.getElementById("passwordStrength");
 
 
     if (passwordStrength) {
 
-        passwordStrength.textContent =
-            "Password strength will appear here.";
+        passwordStrength.textContent = "Password strength will appear here.";
 
-        passwordStrength.className =
-            "password-strength";
+        passwordStrength.className = "password-strength";
 
     }
 
 
-    const summary =
-        document.getElementById(
-            "eventSummary"
-        );
+    const summary = document.getElementById("eventSummary");
 
 
     if (summary) {
 
-        summary.textContent =
-            "Your event information will appear here.";
+        summary.textContent = "Your event information will appear here.";
 
         summary.classList.remove("highlight");
 
@@ -591,16 +526,12 @@ document.addEventListener(
            PASSWORD EVENT
            ----------------------------------------- */
 
-        const password =
-            document.getElementById("password");
+        const password = document.getElementById("password");
 
 
         if (password) {
 
-            password.addEventListener(
-                "input",
-                checkPasswordStrength
-            );
+            password.addEventListener("input", checkPasswordStrength);
 
         }
 
@@ -609,16 +540,12 @@ document.addEventListener(
            EVENT TYPE EVENT
            ----------------------------------------- */
 
-        const eventType =
-            document.getElementById("eventType");
+        const eventType = document.getElementById("eventType");
 
 
         if (eventType) {
 
-            eventType.addEventListener(
-                "change",
-                updateEventSummary
-            );
+            eventType.addEventListener("change",updateEventSummary);
 
         }
 
@@ -627,16 +554,12 @@ document.addEventListener(
            EVENT DATE EVENT
            ----------------------------------------- */
 
-        const eventDate =
-            document.getElementById("eventDate");
+        const eventDate = document.getElementById("eventDate");
 
 
         if (eventDate) {
 
-            eventDate.addEventListener(
-                "change",
-                updateEventSummary
-            );
+            eventDate.addEventListener("change", updateEventSummary);
 
         }
 
@@ -645,28 +568,19 @@ document.addEventListener(
            SERVICE CHECKBOXES
            ----------------------------------------- */
 
-        const serviceCheckboxes =
-            document.querySelectorAll(
-                'input[name="services"]'
-            );
+        const serviceCheckboxes = document.querySelectorAll('input[name="services"]');
 
 
         /*
            LOOP through all service checkboxes.
         */
 
-        for (
-            let i = 0;
-            i < serviceCheckboxes.length;
-            i++
-        ) {
+        for (let i = 0; i < serviceCheckboxes.length; i++) {
 
             serviceCheckboxes[i].addEventListener(
                 "change",
                 function () {
-
                     updateSelectedServices();
-
                 }
             );
 
@@ -684,45 +598,23 @@ document.addEventListener(
 
 function updateSelectedServices() {
 
-    const checkboxes =
-        document.querySelectorAll(
-            'input[name="services"]:checked'
-        );
+    const checkboxes = document.querySelectorAll('input[name="services"]:checked');
 
-
-    const summary =
-        document.getElementById(
-            "eventSummary"
-        );
-
+    const summary = document.getElementById("eventSummary");
 
     if (!summary) {
         return;
     }
 
-
     let servicesText = "";
 
 
-    /*
-       FOR LOOP
-       Demonstrates repetition/control statements.
-    */
+    for (let i = 0; i < checkboxes.length; i++) {
 
-    for (
-        let i = 0;
-        i < checkboxes.length;
-        i++
-    ) {
-
-        servicesText +=
-            checkboxes[i].value;
-
+        servicesText += checkboxes[i].value;
 
         if (i < checkboxes.length - 1) {
-
             servicesText += ", ";
-
         }
 
     }
@@ -730,29 +622,126 @@ function updateSelectedServices() {
 
     if (checkboxes.length > 0) {
 
-        summary.innerHTML +=
-            "<br><strong>Selected Services:</strong> " +
-            servicesText;
+        summary.innerHTML += "<br><strong>Selected Services:</strong> " + servicesText;
 
 
         /* Dynamic CSS */
 
-        summary.style.borderColor =
-            "#2a9d8f";
+        summary.style.borderColor = "#2a9d8f";
 
-        summary.style.backgroundColor =
-            "#f3fffc";
+        summary.style.backgroundColor = "#f3fffc";
 
     }
 
     else {
 
-        summary.style.borderColor =
-            "#9d4edd";
+        summary.style.borderColor = "#9d4edd";
 
-        summary.style.backgroundColor =
-            "#faf3ff";
+        summary.style.backgroundColor = "#faf3ff";
 
     }
 
 }
+
+// Change the main picture dynamically
+function changePicture() {
+    const picture = document.getElementById("dynamicPicture");
+
+    if (!picture) {
+        return;
+    }
+
+    const pictures = [
+        "images/birthday.jpg",
+        "images/graduation.jpg",
+        "images/party.jpg"
+    ];
+
+    let currentPicture = 0;
+
+    currentPicture++;
+
+    if (currentPicture >= pictures.length) {
+        currentPicture = 0;
+    }
+
+    picture.src = pictures[currentPicture];
+}
+
+
+// Change text dynamically
+function changeText() {
+    const text = document.getElementById("dynamicText");
+
+    if (!text) {
+        return;
+    }
+
+    const messages = [
+        "Plan your perfect celebration with us!",
+        "Find decorations and accessories for every event.",
+        "Make your special occasion unforgettable!"
+    ];
+
+    let randomNumber = Math.floor(Math.random() * messages.length);
+
+    text.textContent = messages[randomNumber];
+}
+
+
+// Handle image events
+function imageEvents() {
+    const picture = document.getElementById("dynamicPicture");
+
+    if (!picture) {
+        return;
+    }
+
+    picture.addEventListener("click", function () {
+        changePicture();
+        changeText();
+    });
+
+    picture.addEventListener("mouseover", function () {
+        picture.style.transform = "scale(1.05)";
+    });
+
+    picture.addEventListener("mouseout", function () {
+        picture.style.transform = "scale(1)";
+    });
+}
+
+
+// Dynamic picture
+function dynamicPicture() {
+    const picture = document.getElementById("dynamicPicture");
+
+    if (!picture) {
+        return;
+    }
+
+    const images = [
+        "images/birthday.jpg",
+        "images/graduation.jpg",
+        "images/party.jpg"
+    ];
+
+    let index = 0;
+
+    setInterval(function () {
+        picture.src = images[index];
+
+        index++;
+
+        if (index >= images.length) {
+            index = 0;
+        }
+    }, 3000);
+}
+
+
+// Initialize functions
+document.addEventListener("DOMContentLoaded", function () {
+    imageEvents();
+    dynamicPicture();
+});
