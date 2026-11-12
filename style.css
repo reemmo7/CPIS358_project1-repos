@@ -137,9 +137,6 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url("images/background.jpg");
-    background-size: cover;
-    background-position: center;
     color: #5A3A33;
     overflow: hidden;
 }
