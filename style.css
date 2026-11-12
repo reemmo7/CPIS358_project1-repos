@@ -22,8 +22,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #fff8fb;
-    color: #333333;
+    background-color: #F4F6F5;
+    color: #5A3A33;
     line-height: 1.6;
 }
 
@@ -54,14 +54,14 @@ a {
 .main-header {
     width: 100%;
     min-height: 80px;
-    background: linear-gradient( 135deg, #7b2cbf, #c77dff );
-    color: white;
+    background: linear-gradient(135deg, #D99985, #E8C6B5);
+    color: #5A3A33;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 7%;
     /* Shadow effect */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 4px 12px rgba(90, 58, 51, 0.15);
     /* Layering */
     position: relative;
     z-index: 100;
@@ -81,12 +81,8 @@ a {
 
 
 .logo {
-    width: 55px;
-    height: 55px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid white;
-    background-color: white;
+    width: 60px;
+    height: 60px;
 }
 
 
@@ -108,7 +104,7 @@ a {
 
 .main-nav a {
     display: block;
-    color: white;
+    color: #5A3A33;
     padding: 10px 16px;
     border-radius: 20px;
     font-weight: bold;
@@ -117,16 +113,16 @@ a {
 
 
     .main-nav a:hover {
-        background-color: white;
-        color: #7b2cbf;
+        background-color: #F4F6F5;
+        color: #5A3A33;
         transform: translateY(-2px);
     }
 
 
     .main-nav a.active {
-        background-color: white;
-        color: #7b2cbf;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+        background-color: #5A3A33;
+        color: #F4F6F5;
+        box-shadow: 0 3px 8px rgba(90, 58, 51, 0.25);
     }
 
 
@@ -144,7 +140,7 @@ a {
     background-image: url("images/background.jpg");
     background-size: cover;
     background-position: center;
-    color: white;
+    color: #5A3A33;
     overflow: hidden;
 }
 
@@ -157,7 +153,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(50, 20, 70, 0.68);
+    background-color: rgba(232, 198, 181, 0.72);
     z-index: 1;
 }
 
@@ -173,7 +169,7 @@ a {
     .banner-content h2 {
         font-size: 38px;
         margin-bottom: 10px;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        text-shadow: 2px 2px 5px rgba(90, 58, 51, 0.20);
     }
 
 
@@ -202,24 +198,24 @@ a {
    ========================================================= */
 
 .signup-card {
-    background-color: white;
+    background-color: #FFFFFF;
     padding: 35px;
-    border: 1px solid #ead8f2;
+    border: 1px solid #E8C6B5;
     border-radius: 15px;
     /* Shadow requirement */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 25px rgba(90, 58, 51, 0.10);
 }
 
 
 .signup-intro h2 {
-    color: #7b2cbf;
+    color: #5A3A33;
     font-size: 32px;
     margin-bottom: 12px;
 }
 
 
 .signup-intro {
-    color: #555555;
+    color: #796E54;
 }
 
 
@@ -236,7 +232,7 @@ a {
         display: block;
         font-weight: bold;
         margin-bottom: 7px;
-        color: #4a235a;
+        color: #796E54;
     }
 
 
@@ -244,10 +240,10 @@ a {
     .form-group select {
         width: 100%;
         padding: 13px;
-        border: 2px solid #ddd0e5;
+        border: 2px solid #E8C6B5;
         border-radius: 8px;
         font-size: 15px;
-        background-color: #fff;
+        background-color: #F4F6F5;
         transition: border-color 0.3s, box-shadow 0.3s;
     }
 
@@ -255,8 +251,8 @@ a {
         .form-group input:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #9d4edd;
-            box-shadow: 0 0 0 3px rgba(157, 78, 221, 0.15);
+            border-color: #D99985;
+            box-shadow: 0 0 0 3px rgba(217, 153, 133, 0.15);
         }
 
 
@@ -265,18 +261,18 @@ a {
    ========================================================= */
 
 fieldset {
-    border: 2px solid #e4c8ef;
+    border: 2px solid #E8C6B5;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #fcf8ff;
+    background-color: #F4F6F5;
 }
 
 
 legend {
     padding: 0 8px;
     font-weight: bold;
-    color: #7b2cbf;
+    color: #5A3A33;
 }
 
 
@@ -289,7 +285,7 @@ legend {
 
     .checkbox-label input {
         margin-right: 8px;
-        accent-color: #7b2cbf;
+        accent-color: #796E54;
     }
 
 
@@ -300,8 +296,8 @@ legend {
 .terms-box {
     padding: 15px;
     margin: 20px 0;
-    background-color: #faf3ff;
-    border-left: 5px solid #7b2cbf;
+    background-color: #E8C6B5;
+    border-left: 5px solid #D99985;
     border-radius: 6px;
 }
 
@@ -314,20 +310,20 @@ legend {
     display: block;
     min-height: 18px;
     margin-top: 4px;
-    color: #d62828;
+    color: #5A3A33;
     font-size: 13px;
 }
 
 
 .input-error {
-    border-color: #d62828 !important;
-    background-color: #fff4f4 !important;
+    border-color: #D99985 !important;
+    background-color: #F4F6F5 !important;
 }
 
 
 .input-success {
-    border-color: #2a9d8f !important;
-    background-color: #f3fffc !important;
+    border-color: #796E54 !important;
+    background-color: #F4F6F5 !important;
 }
 
 
@@ -343,17 +339,17 @@ legend {
 
 
 .password-weak {
-    color: #d62828;
+    color: #5A3A33;
 }
 
 
 .password-medium {
-    color: #f77f00;
+    color: #D99985;
 }
 
 
 .password-strong {
-    color: #2a9d8f;
+    color: #796E54;
 }
 
 
@@ -364,10 +360,10 @@ legend {
 .dynamic-box {
     padding: 18px;
     margin: 20px 0;
-    border: 2px dashed #9d4edd;
+    border: 2px dashed #D99985;
     border-radius: 10px;
-    background-color: #faf3ff;
-    color: #4a235a;
+    background-color: #F4F6F5;
+    color: #5A3A33;
     min-height: 55px;
     transition: all 0.3s ease;
 }
@@ -375,7 +371,7 @@ legend {
 
     .dynamic-box.highlight {
         transform: scale(1.01);
-        box-shadow: 0 5px 15px rgba(123, 44, 191, 0.15);
+        box-shadow: 0 5px 15px rgba(90, 58, 51, 0.12);
     }
 
 
@@ -396,26 +392,26 @@ legend {
 
 
 .primary-btn {
-    background-color: #7b2cbf;
-    color: white;
+    background-color: #5A3A33;
+    color: #FFFFFF;
 }
 
 
     .primary-btn:hover {
-        background-color: #5a189a;
+        background-color: #796E54;
         transform: translateY(-2px);
-        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 12px rgba(90, 58, 51, 0.20);
     }
 
 
 .secondary-btn {
-    background-color: #e9d8f4;
-    color: #4a235a;
+    background-color: #E8C6B5;
+    color: #5A3A33;
 }
 
 
     .secondary-btn:hover {
-        background-color: #d8b4e8;
+        background-color: #D99985;
     }
 
 
@@ -424,18 +420,18 @@ legend {
    ========================================================= */
 
 .signup-side-card {
-    background-color: white;
+    background-color: #FFFFFF;
     padding: 25px;
     border-radius: 15px;
-    border: 1px solid #ead8f2;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    border: 1px solid #E8C6B5;
+    box-shadow: 0 8px 25px rgba(90, 58, 51, 0.10);
     position: sticky;
     top: 20px;
 }
 
 
     .signup-side-card h3 {
-        color: #7b2cbf;
+        color: #5A3A33;
         margin-bottom: 15px;
     }
 
@@ -452,8 +448,8 @@ legend {
 
 
 .tip-box {
-    background-color: #fff5e6;
-    border-left: 5px solid #f77f00;
+    background-color: #E8C6B5;
+    border-left: 5px solid #D99985;
     padding: 15px;
     border-radius: 5px;
 }
@@ -464,8 +460,8 @@ legend {
    ========================================================= */
 
 .main-footer {
-    background-color: #29152f;
-    color: white;
+    background-color: #5A3A33;
+    color: #FFFFFF;
     text-align: center;
     padding: 25px;
     margin-top: 50px;
@@ -473,7 +469,7 @@ legend {
 
 
     .main-footer a {
-        color: #e0aaff;
+        color: #E8C6B5;
         font-weight: bold;
     }
 
