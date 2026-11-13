@@ -1,0 +1,104 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EventEase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo-area">
+            <h1>EventEase</h1>
+            <p>Plan Your Event, Make It Special!</p>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <section>
+            <h2>About EventEase</h2>
+
+            <p class="dynamic-box">
+                Eventify is a website designed to make
+                event planning easier for everyone.
+            </p>
+
+            <p>
+                Our website helps users explore different
+                event services and find suitable options
+                for their special occasions.
+            </p>
+        </section>
+
+        <section>
+            <h2>Our Goal</h2>
+
+            <p>
+                Our goal is to save users time and effort
+                by bringing different event planning
+                services together in one place.
+            </p>
+        </section>
+
+        <section>
+            <h2>Explore Our Services</h2>
+
+            <ul id="serviceList">
+                <li>Wedding Planning</li>
+                <li>Birthday Parties</li>
+                <li>Graduation Events</li>
+                <li>Corporate Events</li>
+            </ul>
+
+            <button class="btn primary-btn" onclick="showServices()">
+                Show More Services
+            </button>
+
+            <p id="serviceMessage"></p>
+        </section>
+
+        <section>
+            <h2>Our Event Planning</h2>
+
+            <img id="aboutImage"
+                 src="images/about.jpg"
+                 alt="Event Planning"
+                 width="500">
+
+            <p id="dynamicText">
+                We believe every event deserves
+                special attention and careful planning.
+            </p>
+
+            <button class="btn secondary-btn" onclick="changePicture()">
+                Change Picture
+            </button>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer class="main-footer">
+        <p>© 2026 Eventify. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

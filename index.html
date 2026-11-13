@@ -1,0 +1,144 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventEase - Event Planning Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo-area">
+            <h1>EventEase</h1>
+            <p>Plan Your Event, Make It Special!</p>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <section>
+            <h2>Welcome to EventEase</h2>
+
+            <p>
+                Eventify is a platform that helps people
+                plan and organize different types of events.
+                Users can explore event services and find
+                suitable options for their special occasions.
+            </p>
+
+            <p class="dynamic-box highlight">
+                We make event planning easier and more enjoyable!
+            </p>
+
+            <button class="btn primary-btn" onclick="showWelcome()">
+                Click Here
+            </button>
+
+            <p id="message"></p>
+        </section>
+
+        <section>
+            <h2>Explore Eventify</h2>
+
+            <p>Click on the image below to learn more about us.</p>
+
+            <img src="images/event-banner.jpg"
+                 alt="Event Planning"
+                 usemap="#eventmap"
+                 width="600">
+
+            <map name="eventmap">
+                <area shape="default" href="about.html" alt="About Eventify">
+            </map>
+        </section>
+
+        <section id="events">
+            <h2>Types of Events</h2>
+
+            <p>Eventify helps users explore different events:</p>
+
+            <ul>
+                <li>Weddings</li>
+                <li>Birthday Parties</li>
+                <li>Graduation Parties</li>
+                <li>Corporate Events</li>
+            </ul>
+
+            <h3>Available Event Services</h3>
+
+            <table border="1">
+                <tr>
+                    <th>Event Type</th>
+                    <th>Services</th>
+                </tr>
+
+                <tr>
+                    <td>Weddings</td>
+                    <td>Decoration and Photography</td>
+                </tr>
+
+                <tr>
+                    <td>Birthdays</td>
+                    <td>Cakes and Decorations</td>
+                </tr>
+
+                <tr>
+                    <td>Graduation</td>
+                    <td>Party Planning and Decoration</td>
+                </tr>
+
+                <tr>
+                    <td>Corporate Events</td>
+                    <td>Venue and Organization</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Why Choose Eventify?</h2>
+
+            <article>
+                <p>
+                    Eventify saves time and effort by bringing
+                    event planning services together in one place.
+                    It helps users explore different options
+                    and organize their events more easily.
+                </p>
+            </article>
+
+            <a href="#events">Explore Our Events</a>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer class="main-footer">
+        <p>© 2026 Eventify. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showWelcome() {
+            document.getElementById("message").innerHTML =
+                "Welcome to Eventify! Let's plan your special event.";
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

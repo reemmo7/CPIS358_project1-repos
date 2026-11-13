@@ -1,0 +1,101 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EventEase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo-area">
+            <h1>EventEase</h1>
+            <p>Plan Your Event, Make It Special!</p>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main class="signup-container">
+
+        <section class="signup-card">
+
+            <div class="signup-intro">
+                <h2>Welcome Back!</h2>
+
+                <p>
+                    Please enter your information
+                    to log in to your account.
+                </p>
+            </div>
+
+            <img src="images/login.jpg"
+                 alt="Eventify Login"
+                 width="400">
+
+        </section>
+
+        <section class="signup-side-card">
+
+            <h3>Login to Eventify</h3>
+
+            <form onsubmit="return validateLogin()">
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+
+                    <input type="email"
+                           id="email"
+                           placeholder="Enter your email"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+
+                    <input type="password"
+                           id="password"
+                           placeholder="Enter your password"
+                           required>
+                </div>
+
+                <button type="submit" class="btn primary-btn">
+                    Login
+                </button>
+
+            </form>
+
+            <p id="loginMessage" class="error-message"></p>
+
+            <p>
+                Don't have an account?
+                <a href="signup.html">Sign Up Here</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer class="main-footer">
+        <p>© 2026 Eventify. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
