@@ -743,5 +743,16 @@ function dynamicPicture() {
 // Initialize functions
 document.addEventListener("DOMContentLoaded", function () {
     imageEvents();
-    dynamicPicture();
+    dynamicPicture():
+}
+   function showServices() {
+    const message = document.getElementById("serviceMessage");
+
+    if (!message) {
+        return;
+    }
+
+    message.textContent =
+        "We offer birthday parties, graduation events, wedding planning, and corporate events.";
+}
 });
